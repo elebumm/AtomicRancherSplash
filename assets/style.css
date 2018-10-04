@@ -1,0 +1,38 @@
+@font-face {
+    font-family: AtomicRancher;
+    src: url(./lunchds.ttf);
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.background {
+  width:100vw;
+  height:100vh;
+  background-image: url(./wetbackground.png);
+  background-size: cover;
+  text-align: center;
+}
+
+.logo{
+  width: 50%;
+  margin-top: 5%;
+}
+
+.mutant {
+    position: absolute;
+    right: -15%;
+    width: 10%;
+    bottom: 8%;
+}
+
+.typed-cursor {
+    display: none;
+}
+
+.text {
+    font-family: AtomicRancher;
+    font-family: 3em;
+}

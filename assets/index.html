@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="background">
+        <img src="https://i.imgur.com/Z6HiTMz.png" alt="" class="logo">
+        <h3 class="text"></h3>
+        <img src="Cronenberg-Blue.gif" alt="" class="mutant">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script>
+        var mutant = anime({
+            targets: '.mutant',
+            translateX: '-139em',
+            duration: 300000
+        })
+
+        var typed = new Typed('.text', {
+            strings: ['Hello lonely internet traveler...', 'This website is under development. In the meantime, check out our other links!'],
+            typeSpeed: 50
+        })
+    </script>
+</body>
+</html>
