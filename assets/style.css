@@ -1,38 +1,162 @@
 @font-face {
-    font-family: AtomicRancher;
-    src: url(./lunchds.ttf);
+  font-family: AtomicRancher;
+  src: url(./lunchds.ttf);
 }
 
-body{
-    overflow-x: hidden;
-    margin: 0;
+body {
+  overflow-x: hidden;
+  margin: 0;
 }
 
-.background {
-  width:100vw;
-  height:100vh;
-  background-image: url(./wetbackground.png);
-  background-size: cover;
+.image-container {
+  position: relative;
+  display: none;
+  z-index: 99;
+  width: 100%;
   text-align: center;
 }
 
-.logo{
-  width: 50%;
+#cf {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#cf img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#cf img.top {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  animation-direction: alternate;
+}
+
+.logo {
+  text-align: center;
   margin-top: 5%;
 }
 
 .mutant {
-    position: absolute;
-    right: -15%;
-    width: 10%;
-    bottom: 8%;
+  position: absolute;
+  right: -15%;
+  width: 8%;
+  bottom: 8%;
+  z-index: 99;
+}
+
+.mutanko {
+  position: absolute;
+  left: -15%;
+  width: 11%;
+  bottom: 8%;
+  z-index: 99;
+}
+
+.radcross {
+  position: absolute;
+  left: -15%;
+  width: 6%;
+  bottom: 8%;
+  z-index: 99;
 }
 
 .typed-cursor {
-    display: none;
+  display: none;
 }
 
 .text {
-    font-family: AtomicRancher;
-    font-family: 3em;
+  font-family: AtomicRancher;
+  font-family: 3em;
+  z-index: 99;
+  position: relative;
+  margin: 1.6em;
+  text-align: center;
+}
+
+.kickstarter {
+  display: none;
+  width: 15%;
+  z-index: 99;
+  position: absolute;
+  margin: 0% auto;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 769px) {
+  .logo {
+    width: 100% !important;
+    margin-top: 15% !important;
+  }
+
+  .text {
+    font-family: 1.05rem !important;
+    margin-left: 0.3em !important;
+    margin-right: 0.3em !important;
+    font-size: 1.5em;
+  }
+
+  .kickstarter {
+    width: 45%;
+    z-index: 99;
+    position: absolute;
+    margin: 0% auto;
+    left: 0;
+    right: 0;
+  }
+  .mutant {
+    width: 20%;
+  }
+}
+
+@media (max-width: 369px) {
+  .logo {
+    width: 100% !important;
+    margin-top: 15% !important;
+  }
+
+  .text {
+    font-family: 1.05rem !important;
+    margin-left: 0.3em !important;
+    margin-right: 0.3em !important;
+    font-size: 1.1em;
+  }
+
+  .kickstarter {
+    width: 50%;
+    z-index: 99;
+    position: absolute;
+    margin: 0% auto;
+    left: 0;
+    right: 0;
+  }
+  .mutant {
+    width: 30%;
+  }
 }
