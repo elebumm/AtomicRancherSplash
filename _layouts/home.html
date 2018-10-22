@@ -6,21 +6,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <title>Atomic Rancher</title>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '535804653553177');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=535804653553177&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
-    
-        <div class="image-container">
-            <img src="./assets/atomicrancherlogo.png" alt="" class="logo">
-        </div>
-        <h3 class="text">T</h3>
-        <a href="https://www.kickstarter.com/projects/397546265/atomic-rancher"><img class="kickstarter" src="./assets/kickstarter-button-1.png" alt=""></a>
 
-        <img src="./assets/mutanko.gif" alt="" class="mutanko">
-        <img src="./assets/Radcross.gif" alt="" class="radcross">
-        <img src="./assets/Cronenberg-Blue.gif" alt="" class="mutant">
-        <a href="#" id="showvideo">Show Video</a>
-        <div id="test"></div>
+    <div class="image-container">
+        <img src="./assets/atomicrancherlogo.png" alt="" class="logo">
+    </div>
+    <h3 class="text">T</h3>
+    <a href="https://www.kickstarter.com/projects/397546265/atomic-rancher"><img class="kickstarter" src="./assets/kickstarter-button-1.png"
+            alt=""></a>
+
+    <img src="./assets/mutanko.gif" alt="" class="mutanko">
+    <img src="./assets/Radcross.gif" alt="" class="radcross">
+    <img src="./assets/Cronenberg-Blue.gif" alt="" class="mutant">
+    <a href="#" id="showvideo">Show Video</a>
+    <div id="test"></div>
     <div id="cf">
         <img class="bottom" src="./assets/drybackground.png" />
         <img class="top" src="./assets/wetbackground.png" />
@@ -30,7 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.kickstarter').hide();
             $('.image-container').show();
             $('.image-container').addClass("animated fadeInDown");
@@ -42,14 +61,14 @@
             translateX: '-139em',
             duration: 300000
         })
-        
+
         var mutanko = anime({
             delay: 7000,
             targets: '.mutanko',
             translateX: '139em',
             duration: 30000
         })
-        
+
         var radcross = anime({
             delay: 1000,
             targets: '.radcross',
@@ -60,13 +79,13 @@
         var typed = new Typed('.text', {
             strings: ['Hello lonely internet traveler...', 'This website is under development. In the meantime, check out our Kickstarter for Atomic Rancher!'],
             typeSpeed: 50,
-            onComplete: function(self) { $('.kickstarter').fadeIn(1000)}
+            onComplete: function (self) { $('.kickstarter').fadeIn(1000) }
         })
 
         $('a#showvideo').click(function (e) {
-                e.preventDefault();
-                $('div#test').html('<iframe id="video" width="420" height="315" src="//www.youtube.com/embed/aS3DPglji0o?rel=0" frameborder="0" allowfullscreen></iframe>');
-            });
+            e.preventDefault();
+            $('div#test').html('<iframe id="video" width="420" height="315" src="//www.youtube.com/embed/aS3DPglji0o?rel=0" frameborder="0" allowfullscreen></iframe>');
+        });
     </script>
 </body>
 
